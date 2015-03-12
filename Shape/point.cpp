@@ -22,6 +22,7 @@ bool Point::operator == (const Point & point) const
 
 bool Point::operator != (const Point & point) const
 {
-	throw logic_error("Not Implmented yet");
-	return false; 
+	if (x != point.x) return true;
+	if (y != point.y) return true;
+	return false;
 }
