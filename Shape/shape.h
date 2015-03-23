@@ -12,14 +12,13 @@ namespace ShapeLibrary
 	{
 	public:
 		Shape();
-		Shape(IWindowAPI &_API);
+		Shape(IWindowAPI &_API, int _nombrePoints);
 		virtual void add(const Point& _point);
 		virtual void draw();
 		virtual Point getPoint(int _index) const;
 
-	protected:
 		IWindowAPI* API;
-		int nombrePoints;
+		unsigned int nombrePoints;
 		Point* pointTab;
 	};
 }

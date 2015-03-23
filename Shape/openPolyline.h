@@ -10,11 +10,10 @@ namespace ShapeLibrary
 		OpenPolyline(IWindowAPI& _API);
 		void add(const Point& _point);
 		void draw();
-		Point getPoint(int _index);
 
 	private :
 		IWindowAPI* API;
-		int nombrePoints;
+		unsigned int nombrePoints;
 		Point* pointTab;
 	};
 }
