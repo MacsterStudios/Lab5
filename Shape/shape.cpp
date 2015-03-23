@@ -17,8 +17,18 @@ void Shape::draw(){
 }
 
 void Shape::add(const Point& _point){
-	pointTab[nombrePoints] = _point;
+	Point* ancientTableau = pointTab;
+	unsigned int ancientNombre = nombrePoints;
 	nombrePoints++;
+	for (int i = 0; i > ancientNombre; i++){
+		if (i != ancientNombre){
+			pointTab[i] = ancientTableau[i];
+		}
+		else{
+			pointTab[i] = _point;
+		}
+
+	}
 }
 
 Point Shape::getPoint(int _index) const{

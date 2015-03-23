@@ -31,4 +31,5 @@ void OpenPolyline::add(const Point& _point){
 		}
 		
 	}
+
 }
